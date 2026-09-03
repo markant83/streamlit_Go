@@ -43,6 +43,8 @@ if user_input:
         st.success("That is correct!")
     else:
         st.error("That is wrong, it is Michael Jordan!")
+        
+st.space(3)  # Fügt vertikalen Abstand ein (Wert anpassen)
 
 #=====================================================================================================================================
 #mortgage calculator
