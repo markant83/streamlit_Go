@@ -40,6 +40,7 @@ if user_input:
     answer = user_input.strip().lower()
     
     if any(goat in answer for goat in ["mj", "jordan", "michael jordan"]):
+        st.balloons()
         st.success("That is correct!")
     else:
         st.error("That is wrong, it is Michael Jordan!")
