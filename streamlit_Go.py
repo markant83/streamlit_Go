@@ -23,6 +23,17 @@ st.markdown("""
     div[data-testid="stAlert"] {
         max-width: 300px;
     }
+
+    /* 1. Zeile: Frage ("Who is the Goat of Basketball?") */
+    div[data-testid="stTextInput"] label {
+        font-size: 1.4rem !important;
+        font-weight: bold !important;
+    }
+
+    /* 2. Zeile: Eingabe-Text ("MJ") */
+    div[data-testid="stTextInput"] input {
+        font-size: 1.2rem !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
