@@ -35,7 +35,11 @@ st.markdown("### Who is the Goat of Basketball?")
 user_input = st.text_input("Who is the Goat of Basketball?", label_visibility="collapsed")
 
 # Logik für die Antwort
-if st.button("Submit") and user_input:
+with st.form("goat_form"):
+    user_input = st.text_input("Who is the Goat of Basketball?")
+    submitted = st.form_submit_button("Submit")
+
+if submitted and user_input:
     answer = user_input.strip().lower()
     
     if any(goat in answer for goat in ["mj", "jordan", "michael jordan"]):
