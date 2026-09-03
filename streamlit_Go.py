@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import math
 
 st.set_page_config(layout="wide")
+
+# Session State für den Expander-Zustand initialisieren
+if "expander_open" not in st.session_state:
+    st.session_state.expander_open = False
+
 # CSS: Maximale Gesamtbreite der Seite begrenzen & Eingabefeld-Breite anpassen
 st.markdown("""
 <style>
@@ -45,9 +50,13 @@ if submitted and user_input:
 st.html("<div style='height: 100px;'></div>")  # Abstand anpassen
 
 #=====================================================================================================================================
-#mortgage calculator
-with st.expander("Mortgage Repayments Calculator - Just for fun 😊"):
-    #st.title("Mortgage Repayments Calculator - Just for fun 😊")
+# mortgage calculator (mit dynamischem Expander-Zustand)
+expander = st.expander("Mortgage Repayments Calculator - Just for fun 😊", expanded=st.session_state.expander_open)
+
+with expander:
+    # Sobald Interaktionen im Expander stattfinden, bleibt st.session_state.expander_open auf True
+    st.session_state.expander_open = True
+
     st.write("### Input Data")
     col1, col2 = st.columns(2)
     home_value = col1.number_input("Home Value", min_value=0, value=500000, step=10000)
@@ -74,7 +83,6 @@ with st.expander("Mortgage Repayments Calculator - Just for fun 😊"):
     col1.metric(label="Monthly Repayments", value=f"${monthly_payment:,.2f}")
     col2.metric(label="Total Repayments", value=f"${total_payments:,.0f}")
     col3.metric(label="Total Interest", value=f"${total_interest:,.0f}")
-    
     
     # Create a data-frame with the payment schedule.
     schedule = []
