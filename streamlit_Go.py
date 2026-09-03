@@ -43,6 +43,9 @@ if submitted and user_input:
     if any(goat in answer for goat in ["mj", "jordan", "michael jordan"]):
         st.balloons()
         st.success("That is correct!")
+    elif any(lebron in answer for lebron in ["lebron", "james", "king james"]):
+        st.image("MJ_lol.gif")  # Passe den Dateinamen deines LeBron-GIFs hier an
+        st.error("Nice try! But LeBron is not the GOAT, Michael Jordan is!")
     else:
         st.image("MJ_dunk.gif")
         st.error("That is wrong, it is Michael Jordan!")
