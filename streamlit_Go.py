@@ -43,6 +43,7 @@ if user_input:
         st.balloons()
         st.success("That is correct!")
     else:
+        st.image("MJ_dunk.gif")
         st.error("That is wrong, it is Michael Jordan!")
         
 st.html("<div style='height: 100px;'></div>")  # Abstand anpassen
