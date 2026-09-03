@@ -48,8 +48,10 @@ st.html("<div style='height: 60px;'></div>")  # Abstand anpassen
 
 #=====================================================================================================================================
 #mortgage calculator
-
-st.title("Mortgage Repayments Calculator - Just for fun 😊")
+with st.expander("Mortgage Repayments Calculator - Just for fun 😊"):
+    st.subheader("Input Data")
+    
+#st.title("Mortgage Repayments Calculator - Just for fun 😊")
 
 st.write("### Input Data")
 col1, col2 = st.columns(2)
