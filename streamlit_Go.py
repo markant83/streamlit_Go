@@ -27,13 +27,6 @@ colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FF8333", "#33FFD1", "#FF
 letters = [f'<span style="color:{colors[i % len(colors)]};">{c}</span>' if c != " " else "&nbsp;" for i, c in enumerate(text)]
 st.markdown(f'<h1 style="font-family: serif; font-size: 3.5rem;">{"".join(letters)}</h1>', unsafe_allow_html=True)
 
-
-# Vergrößerte Überschrift
-st.markdown("### Who is the Goat of Basketball?")
-
-# Eingabefeld (Label ist versteckt, da bereits oben angezeigt)
-user_input = st.text_input("Who is the Goat of Basketball?", label_visibility="collapsed")
-
 # Logik für die Antwort
 with st.form("goat_form"):
     user_input = st.text_input("Who is the Goat of Basketball?")
