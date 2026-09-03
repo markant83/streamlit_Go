@@ -26,7 +26,7 @@ st.markdown("""
 
     /* 1. Zeile: Frage ("Who is the Goat of Basketball?") */
     div[data-testid="stTextInput"] label {
-        font-size: 1.4rem !important;
+        font-size: 2.4rem !important;
         font-weight: bold !important;
     }
 
