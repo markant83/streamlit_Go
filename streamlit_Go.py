@@ -44,7 +44,7 @@ if user_input:
     else:
         st.error("That is wrong, it is Michael Jordan!")
         
-st.html("<div style='height: 60px;'></div>")  # Abstand anpassen
+st.html("<div style='height: 100px;'></div>")  # Abstand anpassen
 
 #=====================================================================================================================================
 #mortgage calculator
