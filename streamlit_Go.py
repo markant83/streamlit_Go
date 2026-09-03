@@ -44,12 +44,12 @@ if user_input:
     else:
         st.error("That is wrong, it is Michael Jordan!")
         
-st.space(3)  # Fügt vertikalen Abstand ein (Wert anpassen)
+st.space(6)  # Fügt vertikalen Abstand ein (Wert anpassen)
 
 #=====================================================================================================================================
 #mortgage calculator
 
-st.title("Mortgage Repayments Calculator")
+st.title("Mortgage Repayments Calculator - Just for fun :)")
 
 st.write("### Input Data")
 col1, col2 = st.columns(2)
