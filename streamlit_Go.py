@@ -21,7 +21,7 @@ st.markdown("""
     /* Eingabefeld und Antwortbox auf 300px begrenzen */
     div[data-testid="stTextInput"], 
     div[data-testid="stAlert"] {
-        max-width: 300px;
+        max-width: 350px;
     }
 
     /* 1. Zeile: Frage ("Who is the Goat of Basketball?") */
