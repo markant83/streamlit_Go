@@ -45,15 +45,15 @@ st.markdown(f'<h1 style="font-family: serif; font-size: 3.5rem;">{"".join(letter
 
 # Logik für die Antwort
 with st.form("goat_form"):
-    user_input = st.text_input("Who is the Goat of Basketball?")
+    user_input = st.text_input("Who is the GOAT of Basketball?")
     submitted = st.form_submit_button("Submit")
 
 if submitted and user_input:
     answer = user_input.strip().lower()
     
-    if any(goat in answer for goat in ["mj", "jordan", "michael jordan"]):
+    if any(goat in answer for goat in ["mj", "jordan", "michael jordan", "jordon"]):
         st.balloons()
-        st.success("That is correct!")
+        st.success("That is correct! Michael Jordan is the GOAT.")
     elif any(lebron in answer for lebron in ["lebron", "james", "king james"]):
         st.image("MJ_lol.gif")  # Passe den Dateinamen deines LeBron-GIFs hier an
         st.error("Nice try! But LeBron is not the GOAT, Michael Jordan is!")
